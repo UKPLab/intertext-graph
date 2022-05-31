@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" "http://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article">
+    <front>
+        <journal-meta>
+            <journal-id journal-id-type="pmc">F1000Research</journal-id>
+            <journal-title-group>
+                <journal-title>F1000Research</journal-title>
+            </journal-title-group>
+            <issn pub-type="epub">2046-1402</issn>
+            <publisher>
+                <publisher-name>F1000 Research Limited</publisher-name>
+                <publisher-loc>London, UK</publisher-loc>
+            </publisher>
+        </journal-meta>
+        <article-meta>
+            <article-id pub-id-type="doi">10.12688/f1000research.11029.1</article-id>
+            <article-categories>
+                <subj-group subj-group-type="heading">
+                    <subject>Research Article</subject>
+                </subj-group>
+                <subj-group>
+                    <subject>Articles</subject>
+                    <subj-group>
+                        <subject>Science &amp; Medical Education</subject>
+                    </subj-group>
+                    <subj-group>
+                        <subject>Science &amp; Medical Policies</subject>
+                    </subj-group>
+                </subj-group>
+            </article-categories>
+            <title-group>
+                <article-title>A survey of working conditions within biomedical research in the United Kingdom</article-title>
+                <fn-group content-type="pub-status">
+                    <fn>
+                        <p>[version 1; peer review: 2 approved with reservations]</p>
+                    </fn>
+                </fn-group>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author" corresp="yes">
+                    <name>
+                        <surname>Riddiford</surname>
+                        <given-names>Nick</given-names>
+                    </name>
+                    <xref ref-type="corresp" rid="c1">a</xref>
+                    <xref ref-type="aff" rid="a1">1</xref>
+                </contrib>
+                <aff id="a1">
+                    <label>1</label>Institut Curie, Paris, 75248, France</aff>
+            </contrib-group>
+            <author-notes>
+                <corresp id="c1">
+                    <label>a</label>
+                    <email xlink:href="mailto:nickriddiford@gmail.com">nickriddiford@gmail.com</email>
+                </corresp>
+                <fn fn-type="conflict">
+                    <p>
+                        <bold>Competing interests: </bold>No competing interests were disclosed.</p>
+                </fn>
+            </author-notes>
+            <pub-date pub-type="epub">
+                <day>7</day>
+                <month>3</month>
+                <year>2017</year>
+            </pub-date>
+            <pub-date pub-type="collection">
+                <year>2017</year>
+            </pub-date>
+            <volume>6</volume>
+            <elocation-id>229</elocation-id>
+            <history>
+                <date date-type="accepted">
+                    <day>6</day>
+                    <month>3</month>
+                    <year>2017</year>
+                </date>
+            </history>
+            <permissions>
+                <copyright-statement>Copyright: &#x00a9; 2017 Riddiford N</copyright-statement>
+                <copyright-year>2017</copyright-year>
+                <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+                    <license-p>This is an open access article distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p>
+                </license>
+            </permissions>
+            <self-uri content-type="pdf" xlink:href="f1000research-6-11897.pdf"/>
+            <abstract>
+                <p>
+                    <bold>Background: </bold>Many recent articles have presented a bleak view of career prospects in biomedical research in the US. Too many PhDs and postdocs are trained for too few research positions, creating a &#x201c;holding-tank&#x201d; of experienced senior postdocs who are unable to get a permanent position. Coupled with relatively low salaries and the high levels of pressure to publish in top-tier academic journals, this has created a toxic environment that is perhaps responsible for a recently observed decline in biomedical postdocs in the US, the so-called &#x201c;postdocalypse&#x201d;.</p>
+                <p> 
+                    <bold>Methods:</bold> In order to address the gulf of information relating to working habits and attitudes of UK-based biomedical researchers, a survey was conducted and analysed to examine discrete profiles for three major career stages: the PhD, the postdoc and the principal investigator.</p>
+                <p> 
+                    <bold>Results: </bold>Overall, the data presented here echoes trends observed in the US: Scientists in the UK feel disillusioned with academic research, due to the low chance of getting a permanent position and the long hours required at the bench. Also like the US, large numbers of researchers at each distinct career stage are considering leaving biomedical research altogether.</p>
+                <p> 
+                    <bold>Conclusions:</bold> There are several systemic flaws in the academic scientific research machine &#x2013; for example to continual overproduction of PhDs and the lack of stability in the early-mid stages of a research career - that are slowly being addressed in countries such as the US and Germany. This data suggests that similar flaws also exist in the UK, with a large proportion of respondents concerned about their future in research. To avoid lasting damage to the biomedical research agenda in the UK, addressing such concerns should be a major priority.</p>
+            </abstract>
+            <kwd-group kwd-group-type="author">
+                <kwd>Biomedical science</kwd>
+                <kwd>working conditions</kwd>
+                <kwd>brain-drain</kwd>
+                <kwd>postdocalypse</kwd>
+            </kwd-group>
+            <funding-group>
+                <funding-statement>The author(s) declared that no grants were involved in supporting this work.</funding-statement>
+            </funding-group>
+        </article-meta>
+    </front>
+    <body>
+        <sec sec-type="intro">
+            <title>Introduction</title>
+            <p>While there is no shortage of recent articles lamenting the current state of affairs in the scientific research machine (
+                <xref ref-type="bibr" rid="ref-1">Alberts 
+                    <italic>et al.</italic>, 2014</xref>; 
+                <xref ref-type="bibr" rid="ref-3">Bourne, 2013</xref>; 
+                <xref ref-type="bibr" rid="ref-6">Gould, 2015</xref>; 
+                <xref ref-type="bibr" rid="ref-11">Powell, 2015</xref>; 
+                <xref ref-type="bibr" rid="ref-15">Sauermann &amp; Roach, 2016</xref>), these have largely focussed on the US, and data relating to the UK is scarce. The general consensus from the US is that there is a growing workforce - particularly in the biomedical sciences - competing for a number of permanent research positions that has remained largely static since the 1980s (
+                <xref ref-type="bibr" rid="ref-16">Schillebeeckx 
+                    <italic>et al.</italic>, 2013</xref>). Considering that the large majority of this workforce comprises PhD and postdoctoral researchers, who work almost exclusively on short-term, grant-funded contracts, competing for such positions often comes at the cost of stability, financial reward and any sense of work/life balance. Additionally, PhD programmes and postdoctoral posts tend to train scientists solely for a career in academic research, and neglect to equip them with a skill-set that would allow a smooth transition into gainful employment. Perhaps in response to these factors, after three decades of steady growth, the number of biomedical postdocs has started to decline in the US (
+                <xref ref-type="bibr" rid="ref-5">Garrison 
+                    <italic>et al.</italic>, 2016</xref>). Such a &#x201c;postdocalypse&#x201d; is bad for the researchers squeezed out of a career in science, and bad for society as a whole.</p>
+            <p>Answering the call of several recent articles advocating for change within the system (
+                <xref ref-type="bibr" rid="ref-2">Benderly, 2015</xref>; 
+                <xref ref-type="bibr" rid="ref-3">Bourne, 2013</xref>; 
+                <xref ref-type="bibr" rid="ref-6">Gould, 2015</xref>; 
+                <xref ref-type="bibr" rid="ref-8">McDowell 
+                    <italic>et al.</italic>, 2014</xref>; 
+                <xref ref-type="bibr" rid="ref-11">Powell, 2015</xref>), there have been a number of attempts to quantify factors contributing to such a trend (
+                <xref ref-type="bibr" rid="ref-9">McDowell &amp; Heggeness, 2017</xref>; 
+                <xref ref-type="bibr" rid="ref-10">Powell, 2016</xref>; 
+                <xref ref-type="bibr" rid="ref-15">Sauermann &amp; Roach, 2016</xref>). However, while such data is highly revealing, there is a general lack of UK-centric data, and almost a complete absence of the strong advocacy groups for young scientists that have been so successful elsewhere (
+                <xref ref-type="bibr" rid="ref-4">Cain 
+                    <italic>et al.</italic>, 2014</xref>; 
+                <xref ref-type="bibr" rid="ref-8">McDowell 
+                    <italic>et al.</italic>, 2014</xref>). Consequently, this article attempts to plug this gap, and provide a data point for UK-based biomedical scientists. Here, I present an in-depth analysis of survey data collected in response to a recent article calling for change within the UK biomedical system (
+                <xref ref-type="bibr" rid="ref-14">Riddiford, 2016a</xref>). The survey was answered by 1,128 scientists as of 6
+                <sup>th</sup> November 2016, and suggests that trends observed in the US are broadly echoed in the UK.</p>
+        </sec>
+        <sec sec-type="methods">
+            <title>Methods</title>
+            <sec>
+                <title>Survey design</title>
+                <p>A ten-question survey was designed to formally evaluate the working habits of biomedical researches. While the primary intention was to gather information relating to UK-based biomedical scientists, the survey was also open to non-UK-based scientists from a broad range of backgrounds for comparison. The first three questions &#x201c;what position are you?&#x201d;, &#x201c;broadly, what discipline do you work in?&#x201d; and &#x201c;what country do you work in?&#x201d; aimed to serve as a filter to ensure the accurate analysis of UK-based biomedical scientists at different stages of their career. The following three questions &#x201c;how many countries have you worked in over the past five years?&#x201d;, &#x201c;how old are you?&#x201d; and &#x201c;how long have you held this level of position?&#x201d; aimed to construct a demographic census of the respondents, and to enable comparison between specific age groups. The next three questions focussed on the conditions scientists work under, asking &#x201c;how many hours did you work last week?&#x201d;, &#x201c;how many days did you work last week?&#x201d;, &#x201c;what&#x2019;s your annual salary in pounds sterling?&#x201d;. The final question &#x201c;how comfortable do you feel about your long-term prospects in research?&#x201d; gave respondents the opportunity to select multiple responses, and those selecting the answer &#x201c;not at all &#x2013; I&#x2019;m planning on leaving research&#x201d; were invited to expand on their answer, and detail any factors contributing to this decision. The full list of questions and accompanying answer options are available in 
+                    <xref ref-type="other" rid="SM1">Supplementary File 1</xref>. The survey is still active and is hosted by Survey Monkey (
+                    <ext-link ext-link-type="uri" xlink:href="https://www.surveymonkey.co.uk/r/HBP6NXX">https://www.surveymonkey.co.uk/r/HBP6NXX</ext-link>).</p>
+            </sec>
+            <sec>
+                <title>Data analysis</title>
+                <p>To capture as many responses as possible, data was collected between 21
+                    <sup>st</sup> March 2016 and 6
+                    <sup>th</sup> November 2016 (
+                    <xref ref-type="other" rid="DS0">Dataset 1</xref>; 
+                    <xref ref-type="bibr" rid="ref-12">Riddiford, 2017</xref>). In this time period, the survey was answered by 1,128 scientists. Initially, data were filtered to select only for responses from UK-based biomedical researchers (Q2 response: &#x201c;biomedical sciences&#x201d;; Q3: &#x201c;UK&#x201d;) to give a broad overview of working conditions within this cohort. Data were then further filtered to provide a career-stage-specific profile for each of the major tiers of an academic research career; the PhD, the postdoc and the principal investigator (Q1: &#x201c;PhD&#x201d;, &#x201c;postdoc&#x201d; and &#x201c;principal investigator, permanent contract&#x201d; or &#x201c;principal investigator, non-permanent contract&#x201d;). Data for each discrete profile was analysed using a custom Perl script (
+                    <xref ref-type="other" rid="SM1">Supplementary File 2</xref>) to parse downloaded data and include non-standard question answers (i.e. where respondents opted to specify a non-listed answer, or to elaborate on their selected response) in the analysis.</p>
+                <p>For the 299 respondents who provided a written answer to describe in detail the reasons they were planning on leaving research (Q10: &#x201c;not at all &#x2013; I&#x2019;m planning on leaving research&#x201d;), four statements were selected for each career stage as being broadly representative of the issues addressed by others in the same cohort, and are presented in 
+                    <xref ref-type="boxed-text" rid="B1">Box 1</xref>&#x2013;
+                    <xref ref-type="boxed-text" rid="B3">Box 3</xref>. The complete unanalysed data set for responses collected within the stated time period can be found in 
+                    <xref ref-type="other" rid="DS0">Dataset 1</xref> (
+                    <xref ref-type="bibr" rid="ref-12">Riddiford, 2017</xref>; answers compromising the anonymity of respondents [IP address and personal comments] are not included).</p>
+                <boxed-text id="B1">
+                    <label>Box 1. </label>
+                    <caption>
+                        <title>Selected representative statements given in the survey by PhD students planning on leaving academia.</title>
+                    </caption>
+                    <list list-type="bullet">
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0000.gif"/>&#x00a0;&#x00a0;&#x00a0;"I am told to be ambitious yet there just aren't enough jobs for us all to be ambitious. Too much is down to chance."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0001.gif"/>&#x00a0;&#x00a0;&#x00a0;"The system is broken and yet is perpetuated as it is the lucky (and clever) few who make it to the top and tell everyone it will work out if you work hard. The simple fact is: For most people it will not."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0002.gif"/>&#x00a0;&#x00a0;&#x00a0;"The career prospects, a decade of uncertain employment and relatively low pay mean getting out early is a priority for me and many others from my department."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0003.gif"/>&#x00a0;&#x00a0;&#x00a0;"It's essentially a pyramid scheme and once you realise the stats, you start looking for safer alternatives."</p>
+                        </list-item>
+                    </list>
+                </boxed-text>
+                <boxed-text id="B2">
+                    <label>Box 2. </label>
+                    <caption>
+                        <title>Selected representative statements given in the survey by postdocs planning on leaving academia.</title>
+                    </caption>
+                    <list list-type="bullet">
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0000.gif"/>&#x00a0;&#x00a0;&#x00a0;"I'm unwilling to compete against people who will work 12+ hours a day, 7 days a week. The structure of scientific research makes a future in academia look incredibly unappealing."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0001.gif"/>&#x00a0;&#x00a0;&#x00a0;"I've realised it's a pyramid scheme and I'm never going to get a lectureship so I've decided to leave for more stability. Also, I just can't move again, eventually I want to stay in one place for more than 3 years!"</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0002.gif"/>&#x00a0;&#x00a0;&#x00a0;"I am not prepared to uproot my family again for another temporary post, so I am not willing to relocate."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0003.gif"/>&#x00a0;&#x00a0;&#x00a0;"I think pursuing a permanent position in academia is effectively gambling with my future."</p>
+                        </list-item>
+                    </list>
+                </boxed-text>
+                <boxed-text id="B3">
+                    <label>Box 3. </label>
+                    <caption>
+                        <title>Selected representative statements given in the survey by PIs planning on leaving academia.</title>
+                    </caption>
+                    <list list-type="bullet">
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0000.gif"/>&#x00a0;&#x00a0;&#x00a0;"Teaching standards are plummeting, and research funding is nearly impossible to gain. University education and research is about to collapse. It is not a viable career in the UK, despite our dominance in research."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0001.gif"/>&#x00a0;&#x00a0;&#x00a0;"If I cannot secure funding in the next two years, I will face losing the job and leaving research."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0002.gif"/>&#x00a0;&#x00a0;&#x00a0;"When I finally became a PI, I realised that the view I had of academic life was very naive. I can only do research that can be funded. There is not a single day that I do not worry about the project, competition, funding, publications etc."</p>
+                        </list-item>
+                        <list-item>
+                            <label/>
+                            <p>
+                                <graphic xlink:href="f1000research-6-11897-g0003.gif"/>&#x00a0;&#x00a0;&#x00a0;"I have such a heavy teaching load I can't do research as well."</p>
+                        </list-item>
+                    </list>
+                </boxed-text>
+            </sec>
+        </sec>
+        <sec>
+            <title>Results</title>
+            <sec>
+                <title>A general profile of biomedical researchers</title>
+                <p>Of the 900 biomedical scientists who responded to the survey, 37% reported having worked more than 50 hours in the week preceding the survey (12%, &#x2265; 60 hours). Perhaps more striking was that 53% reported working more than five days the week before they answered the survey and that 15% worked every day that week (
+                    <xref ref-type="other" rid="SM1">Supplementary File 1</xref>). Only 16% reported receiving an annual salary in excess of &#x00a3;35,000. Almost all of the respondents were PhD researchers or postdocs, and 98% were employed on short-term contracts.</p>
+            </sec>
+            <sec>
+                <title>Discrete profiles for UK-based biomedical researchers</title>
+                <p>
+                    <bold>
+                        <italic>PhD students.</italic>
+                    </bold> The majority of respondents to the survey were PhD students (54%), representing the youngest, and most mobile cohort, with 94% aged between 25&#x2013;29 and 35% having worked in two or more countries over the past five years (
+                    <xref ref-type="other" rid="DS0">Dataset 1</xref> (
+                    <xref ref-type="bibr" rid="ref-12">Riddiford, 2017</xref>); 
+                    <xref ref-type="other" rid="SM1">Supplementary File 1</xref>). On average, they also reported working more hours per week than other cohorts (37% work over 50 hours a week) and the majority worked more than five days in the week before answering the survey (55%, &gt; 5 days; 16%, 7 days; 
+                    <xref ref-type="fig" rid="f1">Figure 1</xref> - &#x2018;PhD&#x2019;). UK-based PhD students are typically funded via a tax-free stipend of between &#x00a3;13,000 and &#x00a3;20,000, which equates to an hourly salary of &#x00a3;6.70 (assuming a 48 hour week earning the average PhD salary of &#x00a3;17,000). PhDs students are funded on a short-term basis, and 92% of PhD respondents have been at their current level of position for fewer than four years.</p>
+                <fig fig-type="figure" id="f1" position="float">
+                    <label>Figure 1. </label>
+                    <caption>
+                        <title>Graphical representation of analysed survey data.</title>
+                        <p>The data is presented for three discrete career stages, the PhD, the postdoc and the PI.</p>
+                    </caption>
+                    <graphic xlink:href="f1000research-6-11897-g0004.gif"/>
+                </fig>
+                <p>In response to the question &#x201c;How comfortable do you feel about your long-term prospects in research?&#x201d; 5% answered &#x201c;comfortable&#x201d;, with the vast majority expressing major concerns about one or more work-related factors. The most common reason for respondents&#x2019; lack of comfort in the prospect of a career in research was &#x201c;it&#x2019;s too competitive, and there aren&#x2019;t enough jobs&#x201d; (63%), followed by &#x201c;I don&#x2019;t make enough money&#x201d; (45%). Surprisingly, only 28% plan on leaving academia (see 
+                    <xref ref-type="boxed-text" rid="B1">Box 1</xref> for several respondent-provided statements).</p>
+                <p>
+                    <bold>
+                        <italic>Postdoctoral researchers.</italic>
+                    </bold> The next rung on the academic ladder - and therefore the next discrete cohort analysed - is the postdoctoral research fellowship (&#x201c;postdoc&#x201d;), and accordingly this cohort generally comprised older respondents (65% age 30 or older; 
+                    <xref ref-type="fig" rid="f1">Figure 1</xref> - &#x2018;Postdoc&#x2019;). Like PhD students, roughly a third reported having worked in two or more countries over the past five years (33%). While postdocs are also employed on a short-term basis, the number of respondents who reported being employed at the same level for four or more years was drastically higher than for PhD students (&#x2265; 4 years: postdoc, 32%; PhD, 11%; &#x2265; ten years: postdoc, 4.5%; PhD, 0.3%), almost certainly reflecting the growing necessity of pursuing multiple postdocs on the path to becoming a full faculty member (
+                    <xref ref-type="bibr" rid="ref-3">Bourne, 2013</xref>).</p>
+                <p>Also like PhD students, postdocs work long hours - 79% reported working more than 40 hours a week, and 41% for more than five days a week. Despite their age, experience and work ethic, the average salary for biomedical postdocs in the UK is relatively low, with 75% of postdocs earning between &#x00a3;26,000 and &#x00a3;35,000 (4.5% earn more than &#x00a3;41,000), which constitutes an average hourly salary of approximately &#x00a3;14.00 (assuming a 45 hour week earning the average post doc salary of &#x00a3;33,000). However, despite only 7% describing themselves as &#x201c;comfortable&#x201d; in their long-term prospects for a career in research, only 30% plan on leaving academia (see 
+                    <xref ref-type="boxed-text" rid="B2">Box 2</xref> for several representative reasons). The large majority that didn&#x2019;t feel comfortable in a future in research felt that they were working too hard (33% answered &#x201c;I can&#x2019;t keep working this hard&#x201d;) and competing for too few jobs (66% answered &#x201c;It&#x2019;s too competitive, and there aren&#x2019;t enough jobs&#x201d;).</p>
+                <p>
+                    <bold>
+                        <italic>Principal investigators.</italic>
+                    </bold> The final group comprises those who identified as being a principal investigator (&#x201c;PI&#x201d;), and therefore represent an older and more stable cohort that PhD students or postdocs. In total, 63% of respondents in this group were employed on a permanent contract, and only 20% reported working in more than two countries over the last five years. In addition, 80% were over 35 years and 48% reported being employed at the same level for four years or more (&#x2265; ten years: 28%; 
+                    <xref ref-type="other" rid="DS0">Dataset 1</xref> (
+                    <xref ref-type="bibr" rid="ref-12">Riddiford, 2017</xref>)). However, this category was vastly underrepresented in the survey data &#x2013; only 30 individuals responded in total, and only 8 were aged over 45 years &#x2013; representing a major caveat in the interpretation of such data. While such low numbers are insufficient to draw any major conclusions, the data collected do provide some insight into the working habits of UK-based biomedical PIs, and particularly of younger individuals (52% employed at this level for &#x2264; 4 years). In particular, 17% in this cohort reported working over 70 hours in the week preceding the survey, and 25% worked a seven-day week (
+                    <xref ref-type="fig" rid="f1">Figure 1</xref> - &#x2018;PI&#x2019;).</p>
+                <p>Like PhD students and postdocs, the average salary from this group was relatively low (&#x00a3;41,000), which is particularly striking when considering the level of experience required to reach such a position. Accordingly, a low salary was cited as a cause for concern by 38% of respondents (Q10: &#x201c;I don&#x2019;t make enough money&#x201d;), while more respondents felt that their work/life balance was unsustainable (46%; &#x201c;I can&#x2019;t keep working this hard&#x201d;). As in the earlier stages of a research career, roughly a third (31%) plan on leaving research for reasons such as those given in 
+                    <xref ref-type="boxed-text" rid="B3">Box 3</xref>.</p>
+                <supplementary-material id="DS0" xlink:href="https://f1000researchdata.s3.amazonaws.com/datasets/11029/f9e8b4b4-4dea-4f34-b7fe-f69667335dcd_Dataset_1.xls">
+                    <label>Raw data from the survey (anonymity-compromising information has been removed, see Methods).</label>
+                </supplementary-material>
+            </sec>
+        </sec>
+        <sec sec-type="discussion">
+            <title>Discussion</title>
+            <p>The survey data presented here provides a rare and valuable insight into the working conditions of UK-based biomedical researchers. While there has been a recent surge in data collection focussing on the scientific research community - and largely the biomedical sector (
+                <xref ref-type="bibr" rid="ref-9">McDowell &amp; Heggeness, 2017</xref>; 
+                <xref ref-type="bibr" rid="ref-10">Powell, 2016</xref>; 
+                <xref ref-type="bibr" rid="ref-15">Sauermann &amp; Roach, 2016</xref>) - these tend to be concentrated on the US workforce, and data pertaining specifically to the UK is scarce. Therefore, the data presented here is intended to fill this void, and provide a foundation for future discussion relating to biomedical researchers in the UK.</p>
+            <p>Overall, the data presented here suggests a large faction of biomedical researchers working in the UK are deeply concerned about their long-term future in research. In each discrete career stage analysed, roughly equal numbers (PhD: 28%; postdoc: 30%; PI: 31%; 
+                <xref ref-type="other" rid="DS0">Dataset 1</xref>; (
+                <xref ref-type="bibr" rid="ref-12">Riddiford, 2017</xref>)) plan on leaving research, largely due to the lack of job opportunities, and the degree of competition involved in attaining a permanent position. Such findings are largely consistent with the number of scientists reported to be planning on leaving research in the US (
+                <xref ref-type="bibr" rid="ref-15">Sauermann &amp; Roach, 2016</xref>), and represent a major problem - the &#x201c;brain-drain&#x201d; - facing biomedical research (
+                <xref ref-type="bibr" rid="ref-2">Benderly, 2015</xref>; 
+                <xref ref-type="bibr" rid="ref-7">Healy, 1988</xref>).</p>
+            <p>The data also suggest that biomedical scientists in the UK are working long hours and over weekends for relatively little reward: 53% worked more than five days in the week before they took the survey, and only 16% reported receiving an annual salary of over &#x00a3;35,000. A recent online poll of readers conducted by the journal 
+                <italic>Nature</italic> revealed that almost 40% of the 12,000 respondents worked more than 60 hours a week on average (
+                <xref ref-type="bibr" rid="ref-10">Powell, 2016</xref>), a substantially higher number than that found in this survey (12% across all career stages). One explanation is that while the 
+                <italic>Nature</italic> poll asked readers (from all scientific disciplines) to report their average working week, the survey presented here instead asked respondents to report the number of hours worked in the week immediately preceding the survey, and to estimate an average only if this value was atypical. This approach was adopted to limit over-estimation and to provide a more accurate dataset. The same 
+                <italic>Nature</italic> poll also reported that almost two thirds of readers have considered leaving research altogether, and that 15% have actually left, again, far higher than numbers reported here (
+                <xref ref-type="bibr" rid="ref-10">Powell, 2016</xref>). While approximately 30% of UK-based biomedical scientists surveyed here reported their plans to leave research, it is possible that this figure is somewhat inflated. Firstly, as with any survey or poll, the individuals who don&#x2019;t respond are just as important as those who do. It is likely that there exists a population of biomedical researchers who are satisfied enough with their work/life balance that that they chose not to engage with articles addressing such issues, which would tend to dilute more positive views. Secondly, despite approximately 30% of respondents surveyed here stating their intention to leave research, it is probable that some fraction of these will decide to remain, and the number who actually do leave may well be lower.</p>
+            <p>Nonetheless, the almost 300 personal testimonials describing why researchers were planning on leaving are striking. Almost all of these reiterated the same concerns: that continuing in research was not only gambling with their future, but that it was also a bad bet to make in the first place. Many also noted that the hypercompetition (
+                <xref ref-type="bibr" rid="ref-1">Alberts 
+                    <italic>et al.</italic>, 2014</xref>) involved in attaining a faculty position diluted their bargaining power, and drove up the need to sacrifice any sense of work/life balance. For many, this sacrifice is just not a viable option, and rather than facing the prospect of effectively being forced out of a career in scientific research, often at late stages of their careers (
+                <xref ref-type="bibr" rid="ref-13">Riddiford, 2016b</xref>), they are exiting on their own terms.</p>
+            <p>Given the febrile political landscape in the UK and elsewhere, it is perhaps more crucial than ever that the biomedical research community in the UK rally together to ensure that pursuing a career in biomedical research does not require one to gamble with one&#x2019;s future career prospects. In addition, those who make this bet should do so in full knowledge of the employment landscape within academic research. </p>
+        </sec>
+        <sec>
+            <title>Ethics statement</title>
+            <p>Considering the absence of identifying information in data published here, and the non-sensitive nature of the survey, no ethical approval was sought for this study. No information presented here can be used to identify survey participants, and in accordance with SurveyMonkey&#x2019;s data privacy policy (
+                <ext-link ext-link-type="uri" xlink:href="https://www.surveymonkey.com/mp/policy/privacy-policy/">https://www.surveymonkey.com/mp/policy/privacy-policy/</ext-link>), is not accessible to third parties.</p>
+        </sec>
+        <sec>
+            <title>Data availability</title>
+            <p>The data referenced by this article are under copyright with the following copyright statement: Copyright: &#x00ef;&#x00bf;&#x00bd; 2017 Riddiford N</p>
+            <p>Data associated with the article are available under the terms of the Creative Commons Zero "No rights reserved" data waiver (CC0 1.0 Public domain dedication).
+                <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/publicdomain/zero/1.0/"/>
+            </p>
+            <p>Dataset 1: Raw data from the survey (anonymity-compromising information has been removed, see Methods). doi, 
+                <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5256/f1000research.11029.d153379">10.5256/f1000research.11029.d153379</ext-link> (
+                <xref ref-type="bibr" rid="ref-12">Riddiford, 2017</xref>).</p>
+        </sec>
+    </body>
+    <back>
+        <ack>
+            <title>Acknowledgements</title>
+            <p>Many thanks to both Neal Sweeney and Gary McDowell for many fruitful discussions on advocacy and science policy.</p>
+        </ack>
+        <sec id="SM1" sec-type="supplementary-material">
+            <title>Supplementary material</title>
+            <p>Supplementary File 1: The complete survey.</p>
+            <p>
+
+                <ext-link ext-link-type="uri" xlink:href="https://f1000researchdata.s3.amazonaws.com/supplementary/11029/96391988-d1ff-4314-85b5-60efa5834690.docx">Click here to access the data</ext-link>.</p>
+            <p>Supplementary File 2: Perl scripts used to analyse days and hours worked.</p>
+            <p>
+
+                <ext-link ext-link-type="uri" xlink:href="https://f1000researchdata.s3.amazonaws.com/supplementary/11029/95c456a9-b91d-40d2-b52b-461fa31123d1.zip">Click here to access the data</ext-link>.</p>
+        </sec>
+        <ref-list>
+            <ref id="ref-1">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Alberts</surname>
+                            <given-names>B</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Kirschner</surname>
+                            <given-names>MW</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Tilghman</surname>
+                            <given-names>S</given-names>
+                        </name>
+
+                        <etal/>
+</person-group>:
+                    <article-title>Rescuing US biomedical research from its systemic flaws.</article-title>
+                    <source>
+
+                        <italic>Proc Natl Acad Sci USA.</italic>
+</source>
+                    <year>2014</year>;<volume>111</volume>(<issue>16</issue>):<fpage>5773</fpage>&#x2013;<lpage>5777</lpage>.
+                    <pub-id pub-id-type="pmid">24733905</pub-id>
+                    <pub-id pub-id-type="doi">10.1073/pnas.1404402111</pub-id>
+                    <pub-id pub-id-type="pmcid">4000813</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-2">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Benderly</surname>
+                            <given-names>BL</given-names>
+                        </name>
+</person-group>:
+                    <article-title>The case of the disappearing postdocs.</article-title>
+                    <source>
+
+                        <italic>Science.</italic>
+</source>
+                    <year>2015</year>.
+                    <pub-id pub-id-type="doi">10.1126/science.caredit.a1500277</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-3">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Bourne</surname>
+                            <given-names>HR</given-names>
+                        </name>
+</person-group>:
+                    <article-title>A fair deal for PhD students and postdocs.</article-title>
+                    <source>
+
+                        <italic>eLife.</italic>
+</source>
+                    <year>2013</year>;<volume>2</volume>:<fpage>e01139</fpage>.
+                    <pub-id pub-id-type="pmid">24137543</pub-id>
+                    <pub-id pub-id-type="doi">10.7554/eLife.01139</pub-id>
+                    <pub-id pub-id-type="pmcid">3787295</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-4">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Cain</surname>
+                            <given-names>B</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Budke</surname>
+                            <given-names>JM</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Wood</surname>
+                            <given-names>KJ</given-names>
+                        </name>
+
+                        <etal/>
+</person-group>:
+                    <article-title>How postdocs benefit from building a union.</article-title>
+                    <source>
+
+                        <italic>eLife.</italic>
+</source>
+                    <year>2014</year>;<volume>3</volume>:<fpage>e05614</fpage>.
+                    <pub-id pub-id-type="pmid">25415240</pub-id>
+                    <pub-id pub-id-type="doi">10.7554/eLife.05614</pub-id>
+                    <pub-id pub-id-type="pmcid">4238050</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-5">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Garrison</surname>
+                            <given-names>HH</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Justement</surname>
+                            <given-names>LB</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Gerbi</surname>
+                            <given-names>SA</given-names>
+                        </name>
+</person-group>:
+                    <article-title>Biomedical science postdocs: an end to the era of expansion.</article-title>
+                    <source>
+
+                        <italic>FASEB J.</italic>
+</source>
+                    <year>2016</year>;<volume>30</volume>(<issue>1</issue>):<fpage>41</fpage>&#x2013;<lpage>44</lpage>.
+                    <pub-id pub-id-type="pmid">26443818</pub-id>
+                    <pub-id pub-id-type="doi">10.1096/fj.15-280552</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-6">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Gould</surname>
+                            <given-names>J</given-names>
+                        </name>
+</person-group>:
+                    <article-title>How to build a better PhD.</article-title>
+                    <source>
+
+                        <italic>Nature.</italic>
+</source>
+                    <year>2015</year>;<volume>528</volume>(<issue>7580</issue>):<fpage>22</fpage>&#x2013;<lpage>25</lpage>.
+                    <pub-id pub-id-type="pmid">26632571</pub-id>
+                    <pub-id pub-id-type="doi">10.1038/528022a</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-7">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Healy</surname>
+                            <given-names>B</given-names>
+                        </name>
+</person-group>:
+                    <article-title>Innovators for the 21st century: will we face a crisis in biomedical-research brainpower?</article-title>
+                    <source>
+
+                        <italic>N Engl J Med.</italic>
+</source>
+                    <year>1988</year>;<volume>319</volume>(<issue>16</issue>):<fpage>1058</fpage>&#x2013;<lpage>1064</lpage>.
+                    <pub-id pub-id-type="pmid">3173434</pub-id>
+                    <pub-id pub-id-type="doi">10.1056/NEJM198810203191605</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-8">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>McDowell</surname>
+                            <given-names>GS</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Gunsalus</surname>
+                            <given-names>KT</given-names>
+                        </name>
+
+                        <name>
+                            <surname>MacKellar</surname>
+                            <given-names>DC</given-names>
+                        </name>
+
+                        <etal/>
+</person-group>:
+                    <article-title>Shaping the Future of Research: a perspective from junior scientists [version 1; referees: 1 approved, 1 approved with reservations].</article-title>
+                    <source>
+
+                        <italic>F1000Res.</italic>
+</source>
+                    <year>2014</year>;<volume>3</volume>:<fpage>291</fpage>.
+                    <pub-id pub-id-type="pmid">25653845</pub-id>
+                    <pub-id pub-id-type="doi">10.12688/f1000research.5878.1</pub-id>
+                    <pub-id pub-id-type="pmcid">4304227</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-9">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>McDowell</surname>
+                            <given-names>GS</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Heggeness</surname>
+                            <given-names>ML</given-names>
+                        </name>
+</person-group>:
+                    <article-title>Snapshot of the US biomedical workforce.</article-title>
+                    <source>
+
+                        <italic>Nature.</italic>
+</source>
+                    <year>2017</year>;<fpage>541</fpage>.</mixed-citation>
+            </ref>
+            <ref id="ref-10">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Powell</surname>
+                            <given-names>K</given-names>
+                        </name>
+</person-group>:
+                    <article-title>Hard work, little reward: 
+                        <italic>Nature</italic> readers reveal working hours and research challenges.</article-title>
+                    <source>
+
+                        <italic>Nature.</italic>
+</source>
+                    <year>2016</year>.
+                    <pub-id pub-id-type="doi">10.1038/nature.2016.20933</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-11">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Powell</surname>
+                            <given-names>K</given-names>
+                        </name>
+</person-group>:
+                    <article-title>The future of the postdoc.</article-title>
+                    <source>
+
+                        <italic>Nature.</italic>
+</source>
+                    <year>2015</year>;<volume>520</volume>(<issue>7546</issue>):<fpage>144</fpage>&#x2013;<lpage>147</lpage>.
+                    <pub-id pub-id-type="pmid">25855437</pub-id>
+                    <pub-id pub-id-type="doi">10.1038/520144a</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-12">
+                <mixed-citation publication-type="data">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Riddiford</surname>
+                            <given-names>N</given-names>
+                        </name>
+</person-group>:
+                    <article-title>Dataset 1 in: A survey of working conditions within biomedical research in the United Kingdom.</article-title>
+                    <source>
+
+                        <italic>F1000Research.</italic>
+</source>
+                    <year>2017</year>.
+                    <ext-link ext-link-type="uri" xlink:href="http://dx.doi.org/10.5256/f1000research.11029.d153379">Data Source</ext-link>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-13">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Riddiford</surname>
+                            <given-names>N</given-names>
+                        </name>
+</person-group>:
+                    <article-title>The hidden costs of a career in scientific research.</article-title>
+                    <source>
+
+                        <italic>Nature blogs.</italic>
+</source>
+                    <year>2016b</year>.
+                    <ext-link ext-link-type="uri" xlink:href="http://blogs.nature.com/naturejobs/2016/11/28/the-hidden-costs-of-a-career-in-scientific-research/">Reference Source</ext-link>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-14">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Riddiford</surname>
+                            <given-names>N</given-names>
+                        </name>
+</person-group>:
+                    <article-title>Young scientists need to fight for their employment rights.</article-title>
+                    <source>
+
+                        <italic>The Guardian.</italic>
+</source>
+                    <year>2016a</year>.
+                    <ext-link ext-link-type="uri" xlink:href="https://www.theguardian.com/higher-education-network/2016/mar/21/young-scientists-need-to-fight-for-their-employment-rights">Reference Source</ext-link>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-15">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Sauermann</surname>
+                            <given-names>H</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Roach</surname>
+                            <given-names>M</given-names>
+                        </name>
+</person-group>:
+                    <article-title>SCIENTIFIC WORKFORCE. Why pursue the postdoc path?</article-title>
+                    <source>
+
+                        <italic>Science.</italic>
+</source>
+                    <year>2016</year>;<volume>352</volume>(<issue>6286</issue>):<fpage>663</fpage>&#x2013;<lpage>4</lpage>.
+                    <pub-id pub-id-type="pmid">27151854</pub-id>
+                    <pub-id pub-id-type="doi">10.1126/science.aaf2061</pub-id>
+                </mixed-citation>
+            </ref>
+            <ref id="ref-16">
+                <mixed-citation publication-type="journal">
+                    <person-group person-group-type="author">
+
+                        <name>
+                            <surname>Schillebeeckx</surname>
+                            <given-names>M</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Maricque</surname>
+                            <given-names>B</given-names>
+                        </name>
+
+                        <name>
+                            <surname>Lewis</surname>
+                            <given-names>C</given-names>
+                        </name>
+</person-group>:
+                    <article-title>The missing piece to changing the university culture.</article-title>
+                    <source>
+
+                        <italic>Nat Biotechnol.</italic>
+</source>
+                    <year>2013</year>;<volume>31</volume>(<issue>10</issue>):<fpage>938</fpage>&#x2013;<lpage>941</lpage>.
+                    <pub-id pub-id-type="pmid">24104758</pub-id>
+                    <pub-id pub-id-type="doi">10.1038/nbt.2706</pub-id>
+                </mixed-citation>
+            </ref>
+        </ref-list>
+    </back>
+    <sub-article article-type="ref-report" id="report20903">
+        <front-stub>
+            <article-id pub-id-type="doi">10.5256/f1000research.11897.r20903</article-id>
+            <title-group>
+                <article-title>Reviewer response for version 1</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author">
+                    <name>
+                        <surname>Gunsalus</surname>
+                        <given-names>Kearney T. W.</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="r20903a1">1</xref>
+                    <role>Referee</role>
+                    <uri content-type="orcid">https://orcid.org/0000-0001-6022-3159</uri>
+                </contrib>
+                <aff id="r20903a1">
+                    <label>1</label>Department of Biology, Siena College, Loudonville, NY, USA</aff>
+            </contrib-group>
+            <author-notes>
+                <fn fn-type="conflict">
+                    <p>
+                        <bold>Competing interests: </bold>I serve on the Board of Directors of Future of Research, a group mentioned in the paper.</p>
+                </fn>
+            </author-notes>
+            <pub-date pub-type="epub">
+                <day>28</day>
+                <month>3</month>
+                <year>2017</year>
+            </pub-date>
+            <permissions>
+                <copyright-statement>Copyright: &#x00a9; 2017 Gunsalus KTW</copyright-statement>
+                <copyright-year>2017</copyright-year>
+                <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+                    <license-p>This is an open access peer review report distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p>
+                </license>
+            </permissions>
+            <related-article ext-link-type="doi" id="relatedArticleReport20903" related-article-type="peer-reviewed-article" xlink:href="10.12688/f1000research.11029.1"/>
+            <custom-meta-group>
+                <custom-meta>
+                    <meta-name>recommendation</meta-name>
+                    <meta-value>approve-with-reservations</meta-value>
+                </custom-meta>
+            </custom-meta-group>
+        </front-stub>
+        <body>
+            <p>This paper addresses an important gap in the available data regarding the biomedical workforce in the UK. Although larger studies are needed (both in the scope of the questions asked and with a larger and more representative population of respondents), this survey is a nice example of how members of the community can begin to address the gaps in existing data collection and dissemination efforts. &#x00a0;</p>
+            <p> </p>
+            <p> 
+                <underline>Abstract</underline>
+            </p>
+            <p> Please include the number of respondents analyzed and mention something about how the survey was advertised/the target audience. (The caveats about survey responses necessarily being biased to those who were aware of it and cared enough to take the time to respond are buried fairly far into the discussion, and it would be helpful to make some reference to this a little earlier in the paper.)</p>
+            <p> </p>
+            <p> 
+                <underline>Data presentation</underline>
+            </p>
+            <p> Please state clearly throughout the text&#x00a0;the number of responses analyzed in each category. (How many UK-based biomedical researchers responded to the survey? How many PhD student and postdoctoral respondents were there? Etc.)</p>
+            <p> </p>
+            <p> It would be interesting to include a figure showing responses to the final question (how comfortable do you feel about your long-term prospects in research?"); as respondents had the option to select multiple answers, it would be nice to see the percentage selecting each of the possible answers. &#x00a0;</p>
+            <p> </p>
+            <p> For clarity, the colorblind, and those who still prefer to print papers in black and white, it would be preferable to directly label the data in figure 1, rather than using the key. Please label the percentage of respondents in each age group; and label graph axes. Though more typical for an infographic than a figure in a paper, I do like the text boxes highlighting the take-home message for each panel. &#x00a0;</p>
+            <p> </p>
+            <p> I also initially found the visual representation the hourly salary data somewhat confusing; it might make more sense to make the "hourly salary" its own panel, with bars for minimum wage, PhD, postdoc, and PI average hourly pay (rather than showing the minimum wage three times). The hourly salary numbers could be included in or above each bar. &#x00a0;</p>
+            <p> </p>
+            <p> Could you clarify the way average hourly wages are calculated? I noticed for grad students, you assumed a 48-hour work week, while for postdocs the assumption was a 45-hour work week, and I didn't see a number for PIs. Were the assumptions supposed to represent a "typical" respondent, or an average? &#x00a0;</p>
+            <p> </p>
+            <p> 
+                <underline>Future directions for the survey</underline>
+            </p>
+            <p> I hope that data collection and analysis for this project will continue. I have a few minor suggestions, should the survey be revised. &#x00a0; 
+                <list list-type="bullet">
+                    <list-item>
+                        <p>I found it somewhat confusing that the category for (predoctoral)&#x00a0;graduate students appears to be "PhD researcher."</p>
+                    </list-item>
+                    <list-item>
+                        <p>While I understand the importance of keeping such a survey short, it might be helpful to collect some additional demographic data, such&#x00a0;as gender, relationship/marital status (and if partnered, the partner's salary and discipline), and number of children. &#x00a0;</p>
+                    </list-item>
+                </list> Overall, this work addresses an important knowledge gap. I hope data collection will continue and that in future the survey questions can be expanded and the survey itself advertised more broadly.</p>
+            <p>Reviewer Expertise:</p>
+            <p>NA</p>
+            <p>I confirm that I have read this submission and believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard, however I have significant reservations, as outlined above.</p>
+        </body>
+    </sub-article>
+    <sub-article article-type="ref-report" id="report20768">
+        <front-stub>
+            <article-id pub-id-type="doi">10.5256/f1000research.11897.r20768</article-id>
+            <title-group>
+                <article-title>Reviewer response for version 1</article-title>
+            </title-group>
+            <contrib-group>
+                <contrib contrib-type="author">
+                    <name>
+                        <surname>Polka</surname>
+                        <given-names>Jessica K.</given-names>
+                    </name>
+                    <xref ref-type="aff" rid="r20768a1">1</xref>
+                    <role>Referee</role>
+                    <uri content-type="orcid">https://orcid.org/0000-0001-6610-9293</uri>
+                </contrib>
+                <aff id="r20768a1">
+                    <label>1</label>Whitehead Institute, Cambridge, MA, USA</aff>
+            </contrib-group>
+            <author-notes>
+                <fn fn-type="conflict">
+                    <p>
+                        <bold>Competing interests: </bold>I serve as president of the Board of Directors of Future of Research, a group mentioned in this paper.</p>
+                </fn>
+            </author-notes>
+            <pub-date pub-type="epub">
+                <day>20</day>
+                <month>3</month>
+                <year>2017</year>
+            </pub-date>
+            <permissions>
+                <copyright-statement>Copyright: &#x00a9; 2017 Polka JK</copyright-statement>
+                <copyright-year>2017</copyright-year>
+                <license xlink:href="http://creativecommons.org/licenses/by/4.0/">
+                    <license-p>This is an open access peer review report distributed under the terms of the Creative Commons Attribution Licence, which permits unrestricted use, distribution, and reproduction in any medium, provided the original work is properly cited.</license-p>
+                </license>
+            </permissions>
+            <related-article ext-link-type="doi" id="relatedArticleReport20768" related-article-type="peer-reviewed-article" xlink:href="10.12688/f1000research.11029.1"/>
+            <custom-meta-group>
+                <custom-meta>
+                    <meta-name>recommendation</meta-name>
+                    <meta-value>approve-with-reservations</meta-value>
+                </custom-meta>
+            </custom-meta-group>
+        </front-stub>
+        <body>
+            <p>This survey represents an important contribution to our understanding of career satisfaction among early career researchers. As you note, many efforts have focused on the US, so this study is especially valuable in light of its focus on the UK. However, the opt-in nature of the survey should be disclosed in the abstract, and several other parts of the manuscript could be productively modified.</p>
+            <p> </p>
+            <p> 
+                <bold>Methods</bold> 
+                <list list-type="bullet">
+                    <list-item>
+                        <p>Please explain how the survey was advertised and what target audiences were likely reached.</p>
+                    </list-item>
+                    <list-item>
+                        <p>Since you have IP addresses, can you report how many of the responses came from within the UK and how many were from academic institutions? The former would be essential support for the claim that the report is representative of ECRs in the UK.</p>
+                    </list-item>
+                    <list-item>
+                        <p>Furthermore, can you compare age and other factors to any known statistics to evaluate how representative your sample is in these dimensions?</p>
+                    </list-item>
+                </list> 
+                <bold>Results</bold> 
+                <list list-type="bullet">
+                    <list-item>
+                        <p>Please clarify whether the term &#x201c;research&#x201d; is used to mean academic research or research in industry as well. If the latter, did any of the survey respondents identify as industry researchers? For example, at the end of the section on PhD students, you write that 28% plan on leaving academia, yet the question asks about research - a very important distinction. Furthermore, I&#x2019;m not sure that the fact that &#x201c;only 28%&#x201d; are planning on leaving is surprising, since the respondents did not provide information about their available alternatives.</p>
+                    </list-item>
+                    <list-item>
+                        <p>In the postdoc section, the statement &#x201c;the large majority that didn&#x2019;t feel comfortable in a future in research felt that they were working too hard&#x201d; does not make sense at only a 33% response rate.</p>
+                    </list-item>
+                    <list-item>
+                        <p>Throughout, it would be helpful to provide the actual # of responses received, especially when discussing a fraction of a category (for example, X% of postdocs, etc).</p>
+                    </list-item>
+                </list> </p>
+            <p> 
+                <bold>Discussion</bold> 
+                <list list-type="bullet">
+                    <list-item>
+                        <p>Science can offer non-financial rewards, such as the pleasure of doing research and a relatively high level of respect. Therefore I suggest providing a caveat {indicated}&#x00a0;to the sentence: &#x201c;Working long hours and over weekends for relatively little {financial}&#x00a0;reward&#x201d;</p>
+                    </list-item>
+                    <list-item>
+                        <p>Regarding the statement &#x201c;it is probable that some fraction of [researchers stating their intention to leave] will decide to remain, and the number who actually do leave may well be lower.&#x201d; Rather than speculate, can you compare this to existing data on attrition rate, for example figure 1.6 from the 2010 Royal Society report &#x201c;The Scientific Century&#x201d;
+                            <sup>
+                                <xref ref-type="bibr" rid="rep-ref-20768-1">1</xref>
+                            </sup>?</p>
+                    </list-item>
+                </list> </p>
+            <p> 
+                <bold>Figures</bold> 
+                <list list-type="bullet">
+                    <list-item>
+                        <p>Box 1-3: The colored bullet points are distracting - does the color code have meaning?</p>
+                    </list-item>
+                    <list-item>
+                        <p>Figure 1: This graphic is extremely difficult to read. Please label the pie chart sections directly (or better yet, make it a histogram) and provide axis titles and labels for all of the graphs. This will make the legends unnecessary. The &#x201c;days per week&#x201d; visualization would be much better represented by a distribution. PhD (which is ambiguous and should perhaps be PhD student), Postdoc, and PI labels are unnecessarily large.</p>
+                    </list-item>
+                    <list-item>
+                        <p>The data on comfort with long term prospects in research are very interesting. I would like to see a graphical representation of this as well.</p>
+                    </list-item>
+                </list>
+            </p>
+            <p>Reviewer Expertise:</p>
+            <p>NA</p>
+            <p>I confirm that I have read this submission and believe that I have an appropriate level of expertise to confirm that it is of an acceptable scientific standard, however I have significant reservations, as outlined above.</p>
+        </body>
+        <back>
+            <ref-list>
+                <title>References</title>
+                <ref id="rep-ref-20768-1">
+                    <label>1</label>
+                    <mixed-citation>
+                        <article-title>The Scientific Century: securing our future prosperity</article-title>.
+                        <source>
+                            <italic>The Royal Society</italic>
+                        </source>.<year>2010</year>;</mixed-citation>
+                </ref>
+            </ref-list>
+        </back>
+    </sub-article>
+</article>

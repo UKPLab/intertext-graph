@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.2.1",
+    "babel-loader": "^8.2.2",
+    "babel-preset-react-app": "^10.0.0",
+    "bootstrap": "^4.5.3",
+    "d3": "^6.3.1",
+    "postcss-cli": "^8.3.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.32.2",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1"
+  },
+  "name": "intertext-visual",
+  "description": "InterText Graph Visualization",
+  "version": "0.1",
+  "main": "webpack.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "npx sass --no-source-map static/scss/custom.scss static/custom.css && npx postcss static/custom.css --use autoprefixer --replace && npx webpack"
+  },
+  "keywords": [],
+  "author": "Max Eichler <meichler@ukp.informatik.tu-darmstadt.de>"
+}

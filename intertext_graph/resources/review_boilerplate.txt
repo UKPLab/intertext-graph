@@ -1,0 +1,17 @@
+Is the work clearly and accurately presented and does it cite the current literature?
+Are the rationale for, and objectives of, the Systematic Review clearly stated?
+Is the rationale for developing the new method (or application) clearly explained?
+Is the rationale for creating the dataset(s) clearly described?
+Is the rationale for, and objectives of, the study clearly described?
+Is the background of the case’s history and progression described in sufficient detail?
+Is the background of the cases’ history and progression described in sufficient detail?
+Is the rationale for commenting on the previous publication clearly described?
+Is the topic of the review discussed comprehensively in the context of the current literature?
+Is the topic of the opinion article discussed accurately in the context of the current literature?
+Is the work clearly and accurately presented and does it cite the current literature?
+Is the rationale for, and objectives of, the study clearly described?
+Are the data able to test the authors’ proposed hypotheses by satisfying the approved outcome-neutral conditions (such as quality checks, positive controls)?
+Reviewer Expertise:
+Are enough details provided of any physical examination and diagnostic tests, treatment given and outcomes?
+Is the case presented with sufficient detail to be useful for other practitioners?
+Is the rationale for developing the new software tool clearly explained?

@@ -1,0 +1,5 @@
+diff-match-patch/
+node_modules/
+*.css
+*.bundle.js*
+package-lock.json

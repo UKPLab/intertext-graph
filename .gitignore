@@ -1,0 +1,10 @@
+__pycache__/
+venv/
+.idea/
+build/
+*.egg-info/
+
+.DS_Store
+
+test/
+out/

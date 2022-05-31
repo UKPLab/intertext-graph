@@ -1,0 +1,25 @@
+// Colors from TU Darmstadt Corporate Design
+// https://www.intern.tu-darmstadt.de/arbeitsmittel/corporate_design_vorlagen/index.de.jsp
+
+$blue:    #004e8a !default;
+$purple:  #611c73 !default;
+$pink:    #951169 !default;
+$red:     #b90f22 !default;
+$orange:  #cc4c03 !default;
+$yellow:  #d7ac00 !default;
+$green:   #7fab16 !default;
+$teal:    #008877 !default;
+$cyan:    #00689d !default;
+
+$theme-colors: (
+  "primary": $red,
+);
+
+$code-color: $blue;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+.navbar {
+  padding-left: max(1rem, env(safe-area-inset-left));
+  padding-right: max(1rem, env(safe-area-inset-right));
+}
