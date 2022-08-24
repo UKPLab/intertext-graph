@@ -1,8 +1,6 @@
 # InterText Graph Library
 
-This is the official repository for the _InterText Graph_ library introduced in the paper _"Revise and Resubmit: An Intertextual Model of Text-based Collaboration in Peer Review"_.
-
-Have a look at our preprint: [Kuznetsov et al., 2022](https://arxiv.org/abs/2204.10805).
+This is the official repository for the _InterText Graph_ library introduced in the paper _"Revise and Resubmit: An Intertextual Model of Text-based Collaboration in Peer Review"_, see the [paper repository](https://github.com/UKPLab/f1000rd) for more details.
 
 ## Installation
 
@@ -26,15 +24,17 @@ We provide a small web application to visualize serialized _Intertext Graphs_.
 Please use the following citation:
 
 ```
-@misc{https://doi.org/10.48550/arxiv.2204.10805,
-  doi = {10.48550/ARXIV.2204.10805},
-  url = {https://arxiv.org/abs/2204.10805},
-  author = {Kuznetsov, Ilia and Buchmann, Jan and Eichler, Max and Gurevych, Iryna},
-  keywords = {Computation and Language (cs.CL)},
-  title = {Revise and Resubmit: An Intertextual Model of Text-based Collaboration in Peer Review},
-  publisher = {arXiv},
-  year = {2022},
-  copyright = {Creative Commons Attribution Non Commercial Share Alike 4.0 International}
+@article{10.1162/coli_a_00455,
+    author = {Kuznetsov, Ilia and Buchmann, Jan and Eichler, Max and Gurevych, Iryna},
+    title = "{Revise and Resubmit: An Intertextual Model of Text-based Collaboration in Peer Review}",
+    journal = {Computational Linguistics},
+    pages = {1-38},
+    year = {2022},
+    month = {08},
+    issn = {0891-2017},
+    doi = {10.1162/coli_a_00455},
+    url = {https://doi.org/10.1162/coli\_a\_00455},
+    eprint = {https://direct.mit.edu/coli/article-pdf/doi/10.1162/coli\_a\_00455/2038043/coli\_a\_00455.pdf},
 }
 ```
 
