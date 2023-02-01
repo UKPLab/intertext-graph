@@ -1,22 +1,28 @@
-from multiprocessing import Pool
-from os import PathLike
+from abc import ABC, abstractmethod
+from pathlib import Path
 import pkg_resources
 import re
-from typing import Any, Dict, Iterator, List, Union
-from warnings import warn
+from typing import Any, Dict
 
-from tqdm import tqdm
-
-from intertext_graph.itgraph import Edge, Etype, Node, SpanNode
-from intertext_graph.parsers.utils import chunksize, num_processes
+from intertext_graph import Edge, Etype, Node, SpanNode
 
 
-class IntertextParser:
+class IntertextParser(ABC):
 
-    def __init__(self, path: Union[PathLike, str]) -> None:
+    def __init__(self, data: Path | str | Any) -> None:
+        if isinstance(data, Path):
+            self._data = data.resolve()
+        elif isinstance(data, str):
+            self._data = data if data.startswith('http') else Path(data).resolve()
+        else:
+            self._data = data
+        try:
+            version = pkg_resources.require('intertext-graph')[0].version
+        except pkg_resources.DistributionNotFound:
+            version = 'N/A'
         self._meta = {
             'parser': type(self).__name__,
-            'intertext-graph': pkg_resources.require('intertext-graph')[0].version
+            'intertext-graph': version
         }
 
     @classmethod
@@ -42,14 +48,13 @@ class IntertextParser:
             src_node: Node,
             start: int = 0,
             end: int = None,
-            etype: Etype = Etype.LINK,
             meta: Dict[str, Any] = None,
             label: Dict = None) -> Node:
         """Adds a created by meta attribute and passes the arguments to the SpanNode constructor."""
         if not meta:
             meta = {}
         meta['created_by'] = cls.__name__
-        return SpanNode(ntype, src_node, start, end, etype, meta, label)
+        return SpanNode(ntype, src_node, start, end, meta, label)
 
     @classmethod
     def _parse_whitespace(cls, text: str) -> str:

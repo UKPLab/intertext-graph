@@ -1,28 +1,26 @@
 from copy import deepcopy
 from importlib.resources import open_text
 from io import BytesIO
-from os import PathLike
-from typing import Any, Dict, Iterator, List, Optional, Set, Tuple, Union
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 from lxml import etree
-from lxml.etree import XMLSyntaxError
 import requests
 
-from intertext_graph.itgraph import Node, Edge, Etype, IntertextDocument
+from intertext_graph import Node, Edge, Etype, IntertextDocument
 from intertext_graph.parsers.itparser import IntertextParser
 from intertext_graph import resources
 
 
 class F1000XMLParser(IntertextParser):
 
-    def __init__(self, path: Union[PathLike, str]) -> None:
-        # TODO: Handle broken xml
-        super().__init__(path)
-        if isinstance(path, str) and path.startswith('http'):
-            request = requests.get(path)
+    def __init__(self, data: Path | str) -> None:
+        super().__init__(data)
+        if isinstance(self._data, str):
+            request = requests.get(data)
             self._root = etree.parse(BytesIO(request.content))
         else:
-            with open(path, encoding='utf-8') as xml:
+            with self._data.open(encoding='utf-8') as xml:
                 self._root = etree.parse(xml)
         self._curr_section = []
         self._xref_targets = {}
