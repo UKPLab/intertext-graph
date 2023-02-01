@@ -1,13 +1,13 @@
 from __future__ import annotations
 import json
-from typing import Dict, Iterator, List, Optional, TextIO
+from typing import Iterator, List, TextIO
 
 from intertext_graph import Etype, IntertextDocument, Node
 
 
 class IntertextMultiGraph(IntertextDocument):
 
-    def __init__(self, *args: IntertextDocument, **kwargs: Optional[Dict]) -> None:
+    def __init__(self, *args: IntertextDocument, **kwargs) -> None:
         # Need to initialize IntertextDocument first.
         super().__init__([], [], '', {})
         # Use meta dict if specified else merge metadata from docs

@@ -1,7 +1,7 @@
 from __future__ import annotations
 from enum import auto, Enum
 import json
-from typing import Any, Dict, Iterator, List, Optional, TextIO
+from typing import Any, Dict, Iterator, List, TextIO
 from uuid import uuid4
 
 import networkx as nx
@@ -15,7 +15,7 @@ class Node:
         self.content = content.strip()
         self.ntype = ntype
         self.meta = meta
-        self.embedding: Optional[Any] = None
+        self.embedding: Any | None = None
         # Keep track of edges by UUID and retrieve edge objects using the graph instance
         # Necessary to break reference cycles between nodes and edges
         # Lists are faster here then sets due to iterations in the computed properties below

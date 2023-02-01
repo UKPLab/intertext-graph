@@ -1,10 +1,14 @@
 from abc import ABC, abstractmethod
+from multiprocessing import Pool
 from pathlib import Path
 import pkg_resources
 import re
-from typing import Any, Dict
+from typing import Any, Dict, Iterator, List
+
+from tqdm import tqdm
 
 from intertext_graph import Edge, Etype, Node, SpanNode
+from intertext_graph.parsers.utils import chunksize, num_processes
 
 
 class IntertextParser(ABC):
@@ -62,10 +66,7 @@ class IntertextParser(ABC):
         text = re.sub(r'[\n\t   ]+', ' ', text)
         return text.strip()
 
-    def parse(self) -> Any:
-        warn('parse() is deprecated. Use __call__() instead.', DeprecationWarning, stacklevel=2)
-        return self.__call__()
-
+    @abstractmethod
     def __call__(self, *args, **kwargs) -> Any:
         raise NotImplementedError
 

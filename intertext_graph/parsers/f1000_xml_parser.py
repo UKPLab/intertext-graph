@@ -2,9 +2,10 @@ from copy import deepcopy
 from importlib.resources import open_text
 from io import BytesIO
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Set, Tuple
+from typing import Any, Dict, Iterator, List, Set, Tuple
 
 from lxml import etree
+from lxml.etree import XMLSyntaxError
 import requests
 
 from intertext_graph import Node, Edge, Etype, IntertextDocument
@@ -100,7 +101,7 @@ class F1000XMLParser(IntertextParser):
         return [element] + list(element.itersiblings())
 
     @classmethod
-    def _make_node(cls, element: etree._Element, stringify: bool = False, meta: Dict[str, Any] = None) -> Optional[Node]:
+    def _make_node(cls, element: etree._Element, stringify: bool = False, meta: Dict[str, Any] = None) -> Node | None:
         if stringify:
             content = cls._stringify(element)
             if content:
@@ -118,7 +119,7 @@ class F1000XMLParser(IntertextParser):
         return super()._make_node(content, element.tag, meta)
 
     @classmethod
-    def _parse_node_meta(cls, element: etree._Element) -> Optional[Dict[str, str]]:
+    def _parse_node_meta(cls, element: etree._Element) -> Dict[str, str] | None:
         meta = {}
         if 'id' in element.attrib:
             meta['id'] = element.attrib['id']
@@ -158,7 +159,7 @@ class F1000XMLParser(IntertextParser):
         # Return a set as a node can contain one reference multiple times but should be linked with a single edge
         return {xref.attrib['rid'] for xref in xrefs}
 
-    def _parse_element(self, element: etree._Element) -> Tuple[Optional[Node], List[etree._Element]]:
+    def _parse_element(self, element: etree._Element) -> Tuple[Node | None, List[etree._Element]]:
         children = list(element)
         if children:
             # Parse nodes with children, i.e. subtrees
@@ -302,7 +303,7 @@ class F1000XMLParser(IntertextParser):
                 if len(node.meta) == 0:
                     node.meta = None
 
-    def _parse(self, element: etree._Element, meta: Dict[str, Any], prefix: str = '') -> Optional[IntertextDocument]:
+    def _parse(self, element: etree._Element, meta: Dict[str, Any], prefix: str = '') -> IntertextDocument | None:
         nodes, edges = [], []
         title_node = self._make_node(element.find('.//article-title'), stringify=True)
         nodes.append(title_node)
@@ -328,7 +329,7 @@ class F1000XMLParser(IntertextParser):
         self._add_supplementary_edges(nodes, edges)
         return IntertextDocument(nodes, edges, prefix, meta)
 
-    def __call__(self, *args, **kwargs) -> Tuple[IntertextDocument, Dict[str, IntertextDocument], Optional[IntertextDocument]]:
+    def __call__(self, *args, **kwargs) -> Tuple[IntertextDocument, Dict[str, IntertextDocument], IntertextDocument | None]:
         # Main document
         self._parse_meta()
         prefix = None
@@ -367,7 +368,7 @@ class F1000XMLParser(IntertextParser):
         return main_doc, reviews, revision
 
     @classmethod
-    def _batch_func(cls, path: Union[PathLike, str]) -> Optional[Tuple[IntertextDocument, Dict[str, IntertextDocument], Optional[IntertextDocument]]]:
+    def _batch_func(cls, path: Path | str) -> Tuple[IntertextDocument, Dict[str, IntertextDocument], IntertextDocument | None] | None:
         try:
             parser = cls(path)
             doc, reviews, rev = parser()
@@ -377,5 +378,5 @@ class F1000XMLParser(IntertextParser):
             return None
 
     @classmethod
-    def batch_parse(cls, files: List[Union[PathLike, str]]) -> Iterator[Tuple[IntertextDocument, Dict[str, IntertextDocument], Optional[IntertextDocument]]]:
+    def batch_parse(cls, files: List[Path | str]) -> Iterator[Tuple[IntertextDocument, Dict[str, IntertextDocument], IntertextDocument | None]]:
         return super().batch_parse(files)
