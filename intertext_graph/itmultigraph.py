@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from typing import Dict, Iterator, List, Optional, TextIO
 
-from intertext_graph.itgraph import Etype, IntertextDocument, Node
+from intertext_graph import Etype, IntertextDocument, Node
 
 
 class IntertextMultiGraph(IntertextDocument):
@@ -10,27 +10,13 @@ class IntertextMultiGraph(IntertextDocument):
     def __init__(self, *args: IntertextDocument, **kwargs: Optional[Dict]) -> None:
         # Need to initialize IntertextDocument first.
         super().__init__([], [], '', {})
-
-        nodes = []
-        edges = []
         # Use meta dict if specified else merge metadata from docs
-        self.meta = kwargs['meta'] if 'meta' in kwargs else {}
-        for doc in args:
-            nodes += doc.nodes
-            edges += doc.edges
-            if 'meta' not in kwargs and doc.meta:
-                self.meta.update(doc.meta)
-
+        meta = kwargs['meta'] if 'meta' in kwargs else {}
         self._prefix = 'multi'
-        """As we build the new IntertextDocument from existing graphs, set
-        _deserialization to True to avoid creating double edges
-        in IntertextDocument.add_node()."""
-        self._init_from_existing_doc = True
-        for n in nodes:
-            self.add_node(n)
-        for e in edges:
-            self.add_edge(e)
-        self._init_from_existing_doc = False
+        for doc in args:
+            if not meta and doc.meta:
+                self.meta.update(doc.meta)
+            self.add_graph(doc)
 
     @property
     def root(self) -> Node:
@@ -45,6 +31,17 @@ class IntertextMultiGraph(IntertextDocument):
         for node in self.nodes:
             if not node.get_edges(Etype.NEXT, outgoing=False) and node.get_edges(Etype.NEXT, incoming=False):
                 yield node
+
+    def add_graph(self, doc: IntertextDocument) -> None:
+        """As we build the new IntertextDocument from existing graphs, set
+        _deserialization to True to avoid creating double edges
+        in IntertextDocument.add_node()."""
+        self._init_from_existing_doc = True
+        for n in doc.nodes:
+            self.add_node(n)
+        for e in doc.edges:
+            self.add_edge(e)
+        self._init_from_existing_doc = False
 
     @classmethod
     def load_json(cls, *args: TextIO) -> IntertextMultiGraph:
