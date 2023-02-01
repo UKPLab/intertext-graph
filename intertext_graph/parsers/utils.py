@@ -4,7 +4,7 @@ import subprocess
 
 
 def chunksize(total: int) -> int:
-    max_chunksize = 128
+    max_chunksize = 16  # Balance chunksize for context switches and imbalances in processing time of instances
     processes = num_processes()
     return max(1, min(max_chunksize, total // processes))  # Reduce amount of context switches
 
