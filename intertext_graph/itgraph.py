@@ -154,6 +154,9 @@ class IntertextDocument:
         for e in edges:
             self.add_edge(e)
 
+    def __len__(self) -> int:
+        return len(self._nodes)
+
     @property
     def nodes(self) -> List[Node]:
         # Hide UUID lookup dict from public API
