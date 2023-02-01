@@ -137,9 +137,6 @@ class Edge:
 class IntertextDocument:
 
     def __init__(self, nodes: List[Node], edges: List[Edge], prefix: str, meta: Dict[str, Any] = None) -> None:
-        # IntertextDocument works independent from NetworkX
-        # The MultiDiGraph can be used for additional features or prototyping
-        self._graph = nx.MultiDiGraph()
         self._prefix = prefix
         self.meta = meta or {}
         if 'ix_counter' not in self.meta:
@@ -196,10 +193,11 @@ class IntertextDocument:
         # For span nodes add an edge from their source.
         # Skip when building from an existing IntertextDocument object.
         if not self._init_from_existing_doc and isinstance(node, SpanNode):
-            edge = Edge(node.src_node, node, Etype.LINK)
+            edge = Edge(node.src_node, node, Etype.LINK, meta={
+                'created_by': node.meta['created_by']
+            } if node.meta and 'created_by' in node.meta else None)
             edge._doc = self
             self.add_edge(edge)
-        self._graph.add_node(node)
 
     def add_edge(self, edge: Edge) -> None:
         edge._doc = self
@@ -209,8 +207,6 @@ class IntertextDocument:
         edge.tgt_node.add_edge(edge)
         self._edges[edge._uuid] = edge
         self._edge_ix_to_uuid[edge.ix] = edge._uuid
-        # Unique key required when removing overlapping edges
-        self._graph.add_edge(edge.src_node, edge.tgt_node, key=edge.ix, attr={'etype': edge.etype, 'ix': edge.ix})
 
     def remove_node(self, node: Node) -> None:
         """Removes a node and all its adjacent edges."""
@@ -218,22 +214,12 @@ class IntertextDocument:
             self.remove_edge(edge)
         del self._nodes[node._uuid]
         del self._node_ix_to_uuid[node.ix]
-        try:
-            self._graph.remove_node(node)
-        except nx.exception.NetworkXError:
-            # Ignore if already removed
-            pass
 
     def remove_edge(self, edge: Edge) -> None:
         edge.src_node.remove_edge(edge)
         edge.tgt_node.remove_edge(edge)
         del self._edges[edge._uuid]
         del self._edge_ix_to_uuid[edge.ix]
-        try:
-            self._graph.remove_edge(edge.src_node, edge.tgt_node, key=edge.ix)
-        except nx.exception.NetworkXError:
-            # Ignore if already removed
-            pass
 
     def save_json(self, fp: TextIO) -> None:
         fp.write(self.to_json(indent=4))
@@ -345,6 +331,18 @@ class IntertextDocument:
             if allow_list is None or node.ntype in allow_list:
                 nodes.append(str(node))
         return '\n'.join(nodes)
+
+    def to_networkx(self) -> nx.MultiDiGraph():
+        """IntertextDocument works independent of NetworkX.
+
+        The MultiDiGraph can be used for additional features or prototyping."""
+        graph = nx.MultiDiGraph()
+        for node in self.nodes:
+            graph.add_node(node)
+        for edge in self.edges:
+            # Unique key required when removing overlapping edges
+            graph.add_edge(edge.src_node, edge.tgt_node, key=edge.ix, attr={'etype': edge.etype, 'ix': edge.ix})
+        return graph
 
     @property
     def node_ix_to_uuid(self) -> Dict[str, uuid4]:
