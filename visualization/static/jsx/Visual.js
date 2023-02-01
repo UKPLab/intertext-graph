@@ -110,15 +110,15 @@ class Visual extends Component {
 
 function Checkbox(props) {
     return (
-        <div className="custom-control custom-checkbox custom-control-inline">
+        <div className="form-check form-check-inline">
             <input
                 type="checkbox"
-                className="custom-control-input"
+                className="form-check-input"
                 id={props.value}
                 name={props.value}
                 onChange={props.handleChange}
                 checked={props.checked} />
-            <label className="custom-control-label" htmlFor={props.value}>
+            <label className="form-check-label" htmlFor={props.value}>
                 {props.value}
             </label>
         </div>
@@ -149,8 +149,7 @@ class Settings extends Component {
         this.props.handleChange('etype', etype);
     }
     parseEdgeTypes(serialized) {
-        let edges = serialized.edges.concat(serialized.span_edges);
-        return Array.from(new Set(edges.map(e => e.etype))).sort();
+        return Array.from(new Set(serialized.edges.map(e => e.etype))).sort();
     }
     saveSVG() {
         let serializer = new XMLSerializer();
@@ -173,7 +172,7 @@ class Settings extends Component {
         }
         return (
             <React.Fragment>
-                <div className="card bg-light shadow-sm mb-3">
+                <div className="card bg-light border-primary shadow-sm h-100 mb-3">
                     <div className="card-body">
                         <h5 className="card-title">Settings</h5>
                         <p className="card-text">Select which edges are shown.</p>
@@ -189,8 +188,8 @@ class Settings extends Component {
                         <a
                         ref={this.saveButtonRef}
                         onClick={this.saveSVG}
-                        className="btn btn-outline-primary">
-                            {"Save SVG "}
+                        className="btn btn-outline-primary d-inline-flex align-items-center">
+                            <span className="me-1">Save SVG</span>
                             <svg width="1em" height="1em" viewBox="0 0 16 16" className="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fillRule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
                                 <path fillRule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
@@ -220,9 +219,8 @@ class Graph extends Component {
     }
     createForceLayoutGraph(serialized) {
         let nodes = serialized.nodes.concat(serialized.span_nodes);
-        let edges = serialized.edges.concat(serialized.span_edges);
         // Filter edges based on current selection
-        edges = edges.filter(e => this.props.etype.includes(e.etype));
+        let edges = serialized.edges.filter(e => this.props.etype.includes(e.etype));
         d3.select(this.props.svgRef.current).selectAll('*').remove();
         edges.map(e => {
             e.source = e.src_ix;
@@ -231,13 +229,13 @@ class Graph extends Component {
         // Colors from TU Darmstadt Corporate Design
         // https://www.intern.tu-darmstadt.de/arbeitsmittel/corporate_design_vorlagen/index.de.jsp
         // Orange and red for article-title (7c), abstract (8c), title (9c), and parent (7c)
-        // Blue for p (1c), list (2c), and next (1c)
-        // Green and yellow for label (3c), fig (4c), table-wrap (5c), and boxed-text (6c)
+        // Blue for p (1c), list (5c), and next (1c)
+        // Green and yellow for label (3c), fig (4c), table-wrap (5c), boxed-text (6c), list-item (6c), and link (4c)
         // Violet for ref (11c)
         // Other violet for span (10c)
         let color = d3.scaleOrdinal()
-            .domain(['p', 'list', 'next', 'label', 'fig', 'table-wrap', 'boxed-text', 'ref', 'article-title', 'abstract', 'title', 'parent', 'span'])
-            .range(['#004E8A', '#00689D', '#004E8A', '#008877', '#7FAB16', '#B1BD00', '#D7AC00', '#611C73', '#D28700', '#CC4C03', '#B90F22', '#D28700', '#951169']);
+            .domain(['p', 'list', 'list-item', 'next', 'label', 'fig', 'table-wrap', 'boxed-text', 'ref', 'article-title', 'abstract', 'title', 'parent', 'span', 'link'])
+            .range(['#004E8A', '#B1BD00', '#D7AC00', '#004E8A', '#008877', '#7FAB16', '#B1BD00', '#D7AC00', '#611C73', '#D28700', '#CC4C03', '#B90F22', '#D28700', '#951169', '#7FAB16']);
         let simulation = d3.forceSimulation(nodes)
             .force('link', d3.forceLink(edges).id(e => e.ix))
             .force('charge', d3.forceManyBody().strength(-140))

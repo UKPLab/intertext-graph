@@ -13,9 +13,11 @@ $cyan:    #00689d !default;
 
 $theme-colors: (
   "primary": $red,
+  "secondary": $cyan,
 );
 
 $code-color: $blue;
+$form-check-input-checked-bg-color: $red;
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

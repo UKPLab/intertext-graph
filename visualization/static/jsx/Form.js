@@ -24,31 +24,24 @@ class Form extends Component {
     }
     render() {
         return (
-            <div className="card bg-light shadow-sm mb-3">
+            <div className="card bg-light border-primary shadow-sm h-100 mb-3">
                 <div className="card-body">
                     <form encType="multipart/form-data">
                         <h5 className="card-title">Upload</h5>
                         <p className="card-text">Drop or select a serialized InterText Graph.</p>
-                        <div className="form-row">
-                            <div className="form-group col-12">
-                                {this.state.error &&
-                                    <div className="alert alert-warning" role="alert">
-                                        Error: {this.state.error}
-                                    </div>
-                                }
-                                <div className="custom-file">
-                                    <input
-                                        type="file"
-                                        name="graph"
-                                        className="custom-file-input"
-                                        accept=".json"
-                                        onChange={this.handleChange} />
-                                    <small className="form-text text-muted">
-                                        <code>.json</code>
-                                    </small>
-                                    <label className="custom-file-label overflow-hidden">{this.state.label}</label>
+                        <div className="form-group col-12">
+                            {this.state.error &&
+                                <div className="alert alert-warning" role="alert">
+                                    Error: {this.state.error}
                                 </div>
-                            </div>
+                            }
+                            <input
+                                type="file"
+                                name="graph"
+                                className="form-control"
+                                accept=".json"
+                                onChange={this.handleChange} />
+                            <small className="form-text text-muted"><code>.json</code></small>
                         </div>
                     </form>
                 </div>
