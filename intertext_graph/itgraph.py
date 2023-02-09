@@ -211,8 +211,16 @@ class IntertextDocument:
         self._edges[edge._uuid] = edge
         self._edge_ix_to_uuid[edge.ix] = edge._uuid
 
-    def remove_node(self, node: Node) -> None:
-        """Removes a node and all its adjacent edges."""
+    def remove_node(self, node: Node, preserve_next_edge: bool = False) -> None:
+        """Removes a node and all its adjacent edges.
+
+        Optionally can maintain next edges by connecting the previous and next node.
+        """
+        if preserve_next_edge:
+            # Root and last node do not get a replacement next edge
+            if e_1 := node.get_edges(Etype.NEXT, outgoing=False):
+                if e_2 := node.get_edges(Etype.NEXT, incoming=False):
+                    self.add_edge(Edge(e_1[0].src_node, e_2[0].tgt_node, Etype.NEXT))
         for edge in node.incoming_edges + node.outgoing_edges:
             self.remove_edge(edge)
         del self._nodes[node._uuid]
@@ -300,6 +308,28 @@ class IntertextDocument:
         Follows next edges from the root.
         """
         return self._unroll_graph(self.root)
+
+    def unroll_subtree(self, node: Node) -> list[Node]:
+        """Returns all nodes of the subtree starting with the given node.
+
+        Follows next edges from the given node until leaving the subtree.
+        """
+        subtree = [node]
+        for candidate in self._unroll_graph(node)[1:]:
+            parent = candidate.get_edges(Etype.PARENT, outgoing=False)[0].src_node
+            if parent not in subtree:
+                # Do not return here otherwise the last subtree in the graph won't be returned
+                break
+            subtree.append(candidate)
+        return subtree
+
+    def remove_subtree(self, node: Node, preserve_next_edge: bool = False) -> None:
+        """Removes all nodes belonging to a subtree starting with the given node.
+
+        Optionally can maintain next edges by connecting the previous and next node.
+        """
+        for n in self.unroll_subtree(node):
+            self.remove_node(n, preserve_next_edge)
 
     def breadcrumbs(self, node: Node, etype: Etype) -> Iterator[Node]:
         """Returns an ordered iterator of nodes from the given node following edges backwards to its source.
