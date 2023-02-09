@@ -1,7 +1,7 @@
 from __future__ import annotations
 from enum import auto, Enum
 import json
-from typing import Any, Dict, Iterator, List, TextIO
+from typing import Any, Iterator, TextIO
 from uuid import uuid4
 
 import networkx as nx
@@ -9,7 +9,7 @@ import networkx as nx
 
 class Node:
 
-    def __init__(self, content: str, ntype: str = None, meta: Dict[str, Any] = None) -> None:
+    def __init__(self, content: str, ntype: str = None, meta: dict[str, Any] = None) -> None:
         self.ix = None
         self._uuid = str(uuid4())
         self.content = content.strip()
@@ -24,12 +24,12 @@ class Node:
         self._doc = None
 
     @property
-    def incoming_edges(self) -> List[Edge]:
+    def incoming_edges(self) -> list[Edge]:
         # Prevent reference cycles by retrieving edge objects in a computed property
         return [self._doc._edges[uuid] for uuid in self._incoming_edges]
 
     @property
-    def outgoing_edges(self) -> List[Edge]:
+    def outgoing_edges(self) -> list[Edge]:
         # Prevent reference cycles by retrieving edge objects in a computed property
         return [self._doc._edges[uuid] for uuid in self._outgoing_edges]
 
@@ -47,7 +47,7 @@ class Node:
         elif edge.tgt_node == self:
             self._incoming_edges.remove(edge._uuid)
 
-    def get_edges(self, etype: Etype = None, outgoing: bool = True, incoming: bool = True) -> List[Edge]:
+    def get_edges(self, etype: Etype = None, outgoing: bool = True, incoming: bool = True) -> list[Edge]:
         """Get all edges with optional filters."""
         edges = []
         if outgoing:
@@ -102,7 +102,7 @@ class Etype(Enum):
 
 class Edge:
 
-    def __init__(self, src_node: Node, tgt_node: Node, etype: Etype, meta: Dict[str, Any] = None) -> None:
+    def __init__(self, src_node: Node, tgt_node: Node, etype: Etype, meta: dict[str, Any] = None) -> None:
         self._uuid = str(uuid4())
         # Keep track of src and tgt nodes by UUID and retrieve node objects using the graph instance
         # Necessary to break reference cycles between nodes and edges
@@ -136,13 +136,13 @@ class Edge:
 
 class IntertextDocument:
 
-    def __init__(self, nodes: List[Node], edges: List[Edge], prefix: str, meta: Dict[str, Any] = None) -> None:
+    def __init__(self, nodes: list[Node], edges: list[Edge], prefix: str, meta: dict[str, Any] = None) -> None:
         self._prefix = prefix
         self.meta = meta or {}
         if 'ix_counter' not in self.meta:
             self.meta['ix_counter'] = -1
         # Uses dicts for nodes and edges as fast internal lookup tables
-        self._nodes: Dict[str, Node] = dict()
+        self._nodes: dict[str, Node] = dict()
         # Make mapping of node ix's to uuids
         self._node_ix_to_uuid = {}
         self._edge_ix_to_uuid = {}
@@ -150,7 +150,7 @@ class IntertextDocument:
         self._init_from_existing_doc = False
         for n in nodes:
             self.add_node(n)
-        self._edges: Dict[str, Edge] = dict()
+        self._edges: dict[str, Edge] = dict()
         for e in edges:
             self.add_edge(e)
 
@@ -158,12 +158,12 @@ class IntertextDocument:
         return len(self._nodes)
 
     @property
-    def nodes(self) -> List[Node]:
+    def nodes(self) -> list[Node]:
         # Hide UUID lookup dict from public API
         return list(self._nodes.values())
 
     @property
-    def edges(self) -> List[Edge]:
+    def edges(self) -> list[Edge]:
         # Hide UUID lookup dict from public API
         return list(self._edges.values())
 
@@ -243,7 +243,7 @@ class IntertextDocument:
         return out
 
     @classmethod
-    def _from_json(cls, data: Dict[str, Any]) -> IntertextDocument:
+    def _from_json(cls, data: dict[str, Any]) -> IntertextDocument:
         itg = IntertextDocument([], [], data['prefix'], data['meta'])
         itg._init_from_existing_doc = True
         for n in data['nodes']:
@@ -277,7 +277,7 @@ class IntertextDocument:
     def load_json(cls, fp: TextIO) -> IntertextDocument:
         return cls._from_json(json.load(fp))
 
-    def _unroll_graph(self, node: Node) -> List[Node]:
+    def _unroll_graph(self, node: Node) -> list[Node]:
         result = []
         breadcrumbs = []
         queue = [node]
@@ -294,7 +294,7 @@ class IntertextDocument:
 
         return result
 
-    def unroll_graph(self) -> List[Node]:
+    def unroll_graph(self) -> list[Node]:
         """Returns an ordered list of nodes.
 
         Follows next edges from the root.
@@ -348,11 +348,11 @@ class IntertextDocument:
         return graph
 
     @property
-    def node_ix_to_uuid(self) -> Dict[str, uuid4]:
+    def node_ix_to_uuid(self) -> dict[str, uuid4]:
         return self._node_ix_to_uuid
 
     @property
-    def edge_ix_to_uuid(self) -> Dict[str, uuid4]:
+    def edge_ix_to_uuid(self) -> dict[str, uuid4]:
         return self._edge_ix_to_uuid
 
     def get_node_by_ix(self, ix: str) -> Node:
@@ -373,8 +373,8 @@ class SpanNode(Node):
             src_node: Node,
             start: int = 0,
             end: int = None,
-            meta: Dict[str, Any] = None,
-            label: Dict = None
+            meta: dict[str, Any] = None,
+            label: dict = None
     ) -> None:
         self.ix = None
         self.start = start

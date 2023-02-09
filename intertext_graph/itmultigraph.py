@@ -1,6 +1,6 @@
 from __future__ import annotations
 import json
-from typing import Iterator, List, TextIO
+from typing import Iterator, TextIO
 
 from intertext_graph import Etype, IntertextDocument, Node
 
@@ -56,11 +56,11 @@ class IntertextMultiGraph(IntertextDocument):
             prefixes.append(tmp['prefix'])
         return cls(cls._from_json(data))
 
-    def unroll_graph(self) -> List[Node]:
+    def unroll_graph(self) -> list[Node]:
         """Use unroll_subgraph() for multi graphs."""
         raise NotImplementedError
 
-    def unroll_subgraph(self, root: Node) -> List[Node]:
+    def unroll_subgraph(self, root: Node) -> list[Node]:
         """Returns an ordered list of nodes.
 
         Follows next edges from the specified root.
